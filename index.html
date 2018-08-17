@@ -2,14 +2,25 @@
 <html>
 	<head>
 		<title>JavaScript</title>
+		<style>
+			#myImage{
+				position: absolute;
+				top: 100px;
+				left: 25%;
+			}
+		</style>	
 		<script>
-			function myFunction() {
+			function trocaImagem() {
 				document.getElementById("myImage").src="aberta.jpg"; 				
+			}
+			function imagemTroca() {
+				document.getElementById("myImage").src="fechada.jpg";
 			}	
 		</script>		
 	</head>
 	<body>
-		<button onclick="myFunction()">Clique aqui!</button>
-		<img id="myImage" src="fechada.jpg" style="width:200px">
+		<button id="botao_imagem" onclick="trocaImagem()">Porta aberta</button>
+		<button id="botao_imagem" onclick="imagemTroca()">Porta fechada</button>
+		<img id="myImage" src="fechada.jpg" style="width: 500px">
 	</body>	
 </html>	
